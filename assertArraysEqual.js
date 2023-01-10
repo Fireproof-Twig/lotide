@@ -16,17 +16,20 @@ const eqArrays = function(array1, array2) {
 
 //log message to console
 
-const assertArraysEqual = function(eqArrays) { 
-  if (eqArrays === true){
+const assertArraysEqual = function(array1, array2) { 
+  let answer = eqArrays(array1, array2);
+  if (answer === true){
     console.log(`🟩🟩🟩Assertion Passed: Arrays are equal.`);
   }
-  else if (eqArrays === false) {
+  else if (answer === false) {
     console.log(`🔴🔴🔴Assertion Failed: Arrays are not equal.`);
   }
 }
 
-assertArraysEqual(eqArrays([1, 2], [1, 2, 3]), true); // => should PASS
-assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
-assertArraysEqual(eqArrays([1, 2, 4], [1, 2, 3]), true); // => should PASS
-assertArraysEqual(eqArrays([1, 2, "hello"], [1, 2, "hello"]), true); // => should PASS
+
+
+assertArraysEqual([1, 2], [1, 2, 3]); // => should PASS
+assertArraysEqual([1, 2, 3], [1, 2, 3]); // => should PASS
+assertArraysEqual([1, 2, 4], [1, 2, 3]); // => should PASS
+assertArraysEqual([1, 2, "hello"], [1, 2, "hello"]); // => should PASS
 
