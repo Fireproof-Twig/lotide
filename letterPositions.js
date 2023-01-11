@@ -28,13 +28,12 @@ const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
     return false;
   }
-  for (let value of array1) {
-    if (array1[value] !== array2[value]) {
+  for (let index in array1) {
+    if (array1[index] !== array2[index]) {
       return false;
     }
   }
   return true;
 };
-
 //assertArraysEqual(letterPositions("hello").e, [99]);
 console.log(letterPositions("howdy ho i am freddy the great."));
